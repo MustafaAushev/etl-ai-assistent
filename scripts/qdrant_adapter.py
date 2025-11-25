@@ -7,7 +7,7 @@ from qdrant_client.models import VectorParams, PointStruct
 import uuid
 
 qdrant = QdrantClient(url="http://zenodotus.medcontrol.cloud:6333")
-collection = "safemobile_docs"
+collection = "safemobile_docs1"
 
 # Create collection if it does not exist
 qdrant.delete_collection(collection)
@@ -25,7 +25,7 @@ def load_items_to_collection(items: [ItemWithChunks]):
     print(f"{i}/{size}")
     i += 1
     points = [
-      PointStruct(id=str(uuid.uuid4()), vector=make_vector(text), payload={"text": text}) for text in item['chunks']
+      PointStruct(id=str(uuid.uuid4()), vector=make_vector(f"{item['title']}: {text}"), payload={"text": text, "tags": [item['title']]}) for text in item['chunks']
     ]
     qdrant.upsert(
       collection_name=collection,
