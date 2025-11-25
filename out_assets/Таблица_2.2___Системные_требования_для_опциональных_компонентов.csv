@@ -1,0 +1,4 @@
+ВМ,CPU,"ОЗУ, ГБ","Диск, ГБ"
+Сервер Интеграций (adagent+mail-agent+sesl),2,4,20
+Сервер Управления Linux/Windows (lmsrv/winmdm)*,2,4,20
+Сервер SMAPI,1,3,20

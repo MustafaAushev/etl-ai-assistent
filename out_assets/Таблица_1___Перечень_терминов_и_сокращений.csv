@@ -1,0 +1,32 @@
+Сокращение,Полное наименование
+AD,Служба каталогов (Active Directory)
+API,Интерфейс прикладного программирования (Application Programming Interface)
+APNS,Служба push-уведомлений устройств Apple (Apple Push Notification Service)
+AUTH,Сервер авторизации для SS
+CA,Встроенный удостоверяющий центр для выпуска сертификатов mTLS
+CPU,Центральное процессорное устройство (Central Processing Unit)
+CSR,Запрос на получение сертификата (Certificate Signing Request)
+DCOM,Расширение стандарта Component Object Model (Distributed COM)
+DNS,Система доменных имён (Domain Name System)
+FCM,Служба отправки push-уведомлений (Firebase Cloud Messaging)
+HTTPS,Расширение протокола HTTP для поддержки шифрования в целях повышения безопасности (HyperText Transfer Protocol Secure)
+IP,Интернет-протокол (Internet Protocol)
+MDM,Система управления мобильными устройствами (Mobile Device Management)
+NTP,Протокол сетевого времени (Network Time Protocol)
+SCEP,Упрощенный протокол запроса и получения сертификатов (Simple Certificate Enrollment Protocol)
+SIEM,Управление информацией и событиями безопасности (Security information and event management)
+SMTP,Упрощенный протокол передачи почты (Simple Mail Transfer Protocol)
+SSD,"Запоминающее устройство, твердотельный накопитель (Solid State Drive)"
+TCP,Протокол управления передачей (Transmission Control Protocol)
+UDP,Протокол пользовательских датаграмм (User Datagram Protocol)
+UEM,Unified Endpoint management
+АРМ,Автоматизированное рабочее место
+БД,База данных
+ГИС,Географическая информационная система
+ВМ,Виртуальная машина
+МСК,"Мобильное средство коммуникации (смартфон, планшетный компьютер)"
+ОЗУ,Оперативное запоминающее устройство
+ОС,Операционная система
+ПО,Программное обеспечение
+СУБД,Система управления базами данных
+УЦ,Удостоверяющий центр

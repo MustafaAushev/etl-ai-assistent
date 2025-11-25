@@ -1,0 +1,16 @@
+Количество МСК,ВМ,CPU,"ОЗУ, ГБ","Диск, ГБ"
+1 − 100,Сервер SafeMobile,2,4,20
+1 − 100,(db+arm+iosmdm+apple-mdm-push+regportal+apple-monitor-push+mdmwss+fcmpushserver+scep+ca++file-distr-server+scheduler),2,4,20
+101 − 500,Сервер SafeMobile,2,6,30
+101 − 500,(db+arm+iosmdm+apple-mdm-push+regportal+apple-monitor-push+mdmwss+fcmpushserver+scep+ca++file-distr-server+scheduler),2,6,30
+501 − 1000,Сервер Управления и Администрирования,2,4,30
+501 − 1000,(arm+iosmdm+apple-mdm-push+regportal +apple-monitor-push +mdmwss+fcmpushserver+scep+ca+file-distr-server+scheduler),2,4,30
+501 − 1000,Сервер БД (db),2,4,100
+1001 − 2000,Сервер Управления,2,4,30
+1001 − 2000,(iosmdm+apple-mdm-push+regportal+apple-monitor-push +mdmwss+fcmpushserver+scep+file-distr-server+scheduler),2,4,30
+1001 − 2000,Сервер Администрирования (arm+ca),2,7,30
+1001 − 2000,Сервер БД (db),2,6,200
+2001 − 10000,Сервер Команд (mdmwss+fcmpushserver),2,4,20
+2001 − 10000,Сервер Управления (iosmdm+apple-mdm-push+regportal+apple-monitor-push+file-distr-server+scheduler+scep),4,4,20
+2001 − 10000,Сервер Администрирования (arm+ca),2,7,20
+2001 − 10000,Сервер БД (db),4,16,300
