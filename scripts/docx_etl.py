@@ -24,6 +24,7 @@ from docx.oxml.table import CT_Tbl
 from docx.oxml.text.paragraph import CT_P
 from docx.table import Table
 from docx.text.paragraph import Paragraph
+import json
 
 PICTURE_NS = {
     "pic": "http://schemas.openxmlformats.org/drawingml/2006/picture",
@@ -207,12 +208,11 @@ def extract_assets(document: Document, assets_dir: Path) -> tuple[int, int]:
 def write_output(sections: Iterable[tuple[str, list[str]]], output_path: Path) -> None:
     lines = []
     for title, paragraphs in sections:
-        for paragraph in paragraphs:
-            paragraph = paragraph.strip()
-            if not paragraph:
-                continue
-            lines.append(f"{title}: {paragraph}")
-    output_path.write_text("\n".join(lines), encoding="utf-8")
+        lines.append({
+          'title': title,
+          'text': " ".join(p for p in paragraphs)
+        })
+    output_path.write_text(json.dumps(lines, ensure_ascii=False))
 
 
 def main() -> int:
