@@ -7,7 +7,7 @@ from qdrant_client.models import VectorParams, PointStruct
 import uuid
 
 qdrant = QdrantClient(url="http://zenodotus.medcontrol.cloud:6333")
-collection = "safemobile_docs1"
+collection = "safemobile_docs_2"
 
 # Create collection if it does not exist
 qdrant.delete_collection(collection)
