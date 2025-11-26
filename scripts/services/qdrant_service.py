@@ -22,7 +22,6 @@ class QdrantService:
         )
 
   def load_items_to_collection(self, doc: ParsedDocument, version: str) -> None: 
-    
     items = doc['paragraphs']
     for index, item in enumerate(items):
       print(f"{index}/{len(items)}")

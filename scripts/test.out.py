@@ -2,10 +2,20 @@ from qdrant_client import QdrantClient
 from qdrant_client import models
 from qdrant_client.models import VectorParams, PointStruct
 import json
-from ollama import embeddings
+from ollama import chat
+from services.embedder_service import EmbedderService
 from services.qdrant_service import QdrantService
 
-with open('chunks.json', 'r') as f:
-  r = json.load(f)
-  qdrant = QdrantService()
-  qdrant.load_items_to_collection(r)
+
+QUESTION = ''
+
+qdrant = QdrantService()
+
+hits = qdrant.client.query_points(
+  query=EmbedderService.make_vector(QUESTION),
+  collection_name=qdrant.collection,
+  limit=5,
+  score_threshold=0.5,
+)
+
+print(hits)
