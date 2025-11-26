@@ -2,3 +2,4 @@
 *_assets
 *.txt
 __pycache__
+.DS_Store
