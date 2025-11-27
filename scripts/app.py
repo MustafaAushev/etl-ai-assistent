@@ -7,6 +7,7 @@ import uvicorn
 from services.chunk_splitter_service import ChunkSplitterService
 from services.qdrant_service import QdrantService
 from parsers.docx_parser import DocxParser
+import json
 
 qdrant = QdrantService()
 app = FastAPI()
@@ -33,8 +34,10 @@ async def upload_docx(
         os.remove(tmp_filename)
 
         document = ChunkSplitterService.make_chunks(document)
+        with open(f"out/{file.filename}.json", 'w+') as out:
+          out.write(json.dumps(document, ensure_ascii=False, indent=2))
 
-        qdrant.load_items_to_collection(document, version)
+        # qdrant.load_items_to_collection(document, version)
 
         return JSONResponse(content={'success': 'ok'})
     except Exception as exc:

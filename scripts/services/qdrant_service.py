@@ -11,15 +11,15 @@ class QdrantService:
   def __init__(self) -> None:
     self.client = QdrantClient(url="http://zenodotus.medcontrol.cloud:6333")
     self.collection = 'safemobile_docs'
-    self.__init_collection()
+    # self.__init_collection()
 
-  def __init_collection(self):
-    self.client.delete_collection(self.collection)
-    if self.collection not in [c.name for c in self.client.get_collections().collections]:
-        self.client.create_collection(
-            collection_name=self.collection,
-            vectors_config=VectorParams(size=1024, distance=models.Distance.COSINE)
-        )
+  # def __init_collection(self):
+    # self.client.delete_collection(self.collection)
+    # if self.collection not in [c.name for c in self.client.get_collections().collections]:
+    #     self.client.create_collection(
+    #         collection_name=self.collection,
+    #         vectors_config=VectorParams(size=1024, distance=models.Distance.COSINE)
+    #     )
 
   def load_items_to_collection(self, doc: ParsedDocument, version: str) -> None: 
     items = doc['paragraphs']

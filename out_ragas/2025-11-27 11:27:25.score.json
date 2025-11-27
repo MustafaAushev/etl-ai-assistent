@@ -1,0 +1,10 @@
+{
+  "dataset_length": 6,
+  "score": {
+    "faithfulness": 0.6452366487651171,
+    "answer_relevancy": 0.6105623410016646,
+    "context_precision": 0.354349261842888,
+    "context_recall": 0.6458333333333334,
+    "nv_context_relevance": 0.875
+  }
+}
